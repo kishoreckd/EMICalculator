@@ -1,0 +1,116 @@
+* {
+    /* margin: 0;  */
+    /* padding: 0; */
+    box-sizing: border-box;
+}
+h1{
+    color: white;
+}
+body {
+    background: linear-gradient(0.35turn, rgb(34 141 217), rgb(19 146 175));
+    font-family: serif;
+    /* width: 100%; */
+
+}
+
+.main {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 80%);
+    transition: all 0.3s linear;
+    padding: 32px;
+    width: 55%;
+    margin-left: 306px;
+    margin-top: 0px;
+
+}
+.foot{
+    font-size: 22px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 34px;
+}
+h5{
+    text-align: center;
+    color: rgb(0 136 255);
+    font-size: larger;
+}
+
+
+.calculate {
+    height: 51px;
+    width: 130px;
+    background-color: #0c8fc1;
+    border-radius: 11px;
+    border-color: antiquewhite;
+    margin-left: 267px;
+    color: white;
+    font-size: 20px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: white;
+    border-color: #0c8fc1;
+    color: #0c8fc1;
+}
+
+h1 {
+
+    text-align: center;
+    font-family: system-ui;
+
+}
+
+.labinpu {
+    display: flex;
+}
+
+
+
+/* .inputs{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    gap: 30px;
+    font-size: larger;
+} */
+/* form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+} */
+button.yr {
+    position: relative;
+    left: 449px;
+    bottom: 52px;
+    height: 52px;
+    width: 45px;
+    background-color: #0c8fc1;
+    color: white;
+    border: none;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+}
+
+
+input {
+
+
+    position: relative;
+    width: 90%;
+    height: 52px;
+    margin-left: 124px;
+    display: block;
+    margin-top: 3px;
+    font-size: 18px
+}
+.label{
+    font-size: 24px;
+}
+span{
+    text-align:center ;
+}
+.total {
+    margin-left: 0px;
+}
