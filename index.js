@@ -138,13 +138,13 @@ calculate.addEventListener("click", () => {
             let interestpermonth = finalamount - p;
 
             // storing the emi per month to show on ui
-            emi.innerText = "₹" + Math.round(e);
+            emi.innerText = "₹" + Math.round(e).toLocaleString();
             // storing the total emi amount to show on ui
-            totalemi.innerText = "₹" + finalamount;
+            totalemi.innerText = "₹" + finalamount.toLocaleString();
             // storing the initial value to show on ui
             // ttl.innerText = p;
             //storing interest per month
-            finalinterest.innerText = "₹" + interestpermonth;
+            finalinterest.innerText = "₹" + interestpermonth.toLocaleString();
 
 
 
