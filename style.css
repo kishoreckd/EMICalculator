@@ -86,13 +86,27 @@ button.yr {
     bottom: 52px;
     height: 52px;
     width: 45px;
-    background-color: #0c8fc1;
+    background-color: #0084ff;
+    color: white;
+    border: none;
+
+}
+button.yr.show{
+    background-color: #0c3fc1;
+
+}
+button.mth {
+    position: relative;
+    left: 441px;
+    bottom: 52px;
+    height: 52px;
+    width: 45px;
+    background-color: #0084ff;
     color: white;
     border: none;
     border-top-right-radius: 11px;
     border-bottom-right-radius: 11px;
 }
-
 
 input {
 
@@ -113,4 +127,8 @@ span{
 }
 .total {
     margin-left: 0px;
+}
+.show{
+    background-color: #ff009d;
+    color: white;
 }

@@ -18,45 +18,61 @@ const totalemi = document.querySelector("#ttlemiamt")
 const finalinterest = document.querySelector("#interest")
 
 
-// const yr button 
-const year = document.querySelector(".yr");
+
+const yr = document.querySelector(".yr");
 // console.log(year);
-
+const mth = document.querySelector(".mth")
 // adding event listener for yr 
-year.addEventListener("click", () => {
-    if (year.innerText === "Yr") {
-        year.innerText = "Mth";
-        year.style.backgroundColor = "#0c3fc1"
-        let k = month.value * 12
-        month.value = k;
+yr.addEventListener("click", () => {
+    mth.style.backgroundColor = "#0084ff"
+
+    yr.classList.add("show")
+    mth.classList.remove("show")
 
 
-    }
-    else {
-        year.style.backgroundColor = "#0084ff";
-        year.innerText = "Yr";
+})
 
-        let y = month.value / 12
-        month.value = y;
-    }
+mth.addEventListener("click", () => {
+    mth.style.backgroundColor = "#0c3fc1"
+    mth.classList.add("show")
+    yr.classList.remove("show")
 
 })
 
 
+
+const button = document.querySelectorAll("button")
+
+//looping button for yr and month
+for (let i = 0; i < button.length; i++) {
+    button[i].addEventListener("click", (e) => {
+        if (e.target.matches("#month")) {
+            let k = month.value * 12;
+            month.value = k
+        }
+        else if (e.target.matches("#year")) {
+            let k = month.value
+            if (k > 1) {
+                let d = month.value / 12
+                month.value = d
+
+            }
+        }
+    })
+}
+
+
+
+
+
 // adding event listener for calculate button
 calculate.addEventListener("click", () => {
-    //if the button is in year format
-    if (year.innerText === "Yr") {
-        // check for if the month and interest value is greater than 0
 
-        if (interest.value ==0 && month.value == 0) {
+    if (amount.value != "" && interest.value != "" && month.value != "") {
+        if (interest.value == 0 && month.value == 0) {
             alert("Please enter the values greater than 0")
         }
-
-        //the code will work only there is a value in everyone
-        else if (amount.value != "" && interest.value != "" && month.value != "") {
-            // alert("acc")
-
+        else if (yr.classList.contains("show")) {
             // using the emi formula emi=p*r*(1+r)^n/((1+r)^n)-1
             // p = total amount 
             // r = interest in percentage
@@ -92,27 +108,8 @@ calculate.addEventListener("click", () => {
             finalinterest.innerText = "₹" + interestpermonth.toLocaleString();
 
 
-
         }
         else {
-            alert("Please enter all the values")
-        }
-
-    }
-        //if the button is in month format
-
-    else if (year.innerText === "Mth") {
-
-        // check for if the month and interest value is greater than 0
-        if (interest.value ==0 && month.value == 0) {
-            alert("Please enter the values greater than 0")
-        }
-
-
-        //the code will work only there is a value in everyone
-       else if (amount.value != "" && interest.value != "" && month.value != "") {
-            // alert("acc")
-           
             // using the emi formula emi=p*r*(1+r)^n/((1+r)^n)-1
             // p = total amount 
             // r = interest in percentage
@@ -147,12 +144,12 @@ calculate.addEventListener("click", () => {
             finalinterest.innerText = "₹" + interestpermonth.toLocaleString();
 
 
-
         }
-        else {
-            alert("Please enter all the values")
-        }
-
     }
 
+    else {
+        alert("Please enter all the values")
+
+    }
 })
+
