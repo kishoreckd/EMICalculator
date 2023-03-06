@@ -69,7 +69,7 @@ for (let i = 0; i < button.length; i++) {
 calculate.addEventListener("click", () => {
 
     if (amount.value != "" && interest.value != "" && month.value != "") {
-        if (interest.value == 0 && month.value == 0) {
+        if (interest.value == 0 || month.value == 0) {
             alert("Please enter the values greater than 0")
         }
         else if (yr.classList.contains("show")) {
